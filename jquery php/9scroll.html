@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+<style>
+#scroll {
+    height: 200px;
+    overflow: scroll;
+}
+</style>
+
+<script>
+    $(document).ready(function () {
+        var brojac = 0;
+        var lastScrollTop=0;
+
+        $("#scroll").scroll(function(){
+            $("span").text(brojac += 1);
+        
+            var currentScrollPosition=$(this).scrollTop();
+            $("h3").text(lastScrollTop);
+            if(currentScrollPosition>lastScrollTop) {
+                $("h3").text("scrolai ste dolje");
+            }
+            else{
+                $("h3").text("scrolai ste gore");
+            }
+            lastScrollTop=currentScrollPosition;
+            $("#result").text(lastScrollTop);
+        })
+    })
+</script>
+
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="scroll">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus purus tortor. Cras aliquam vestibulum egestas. Vivamus tincidunt aliquet magna sit amet venenatis. Phasellus enim lorem, cursus sodales maximus quis, dapibus vel nibh. Curabitur condimentum at justo non pharetra. Donec rhoncus congue odio, vel scelerisque lacus volutpat eget. Ut ornare, sem non interdum viverra, mauris urna aliquam justo, vel facilisis lacus tortor eget risus. Donec eu cursus augue, non accumsan dolor. Aenean imperdiet nibh eu nisi iaculis, sed aliquet mauris cursus. Praesent mauris lorem, vulputate non metus non, rutrum auctor velit. Vestibulum dapibus purus a diam accumsan imperdiet. Duis accumsan est non odio faucibus, convallis tempor nunc laoreet. Praesent iaculis tristique ligula quis ullamcorper. Integer sollicitudin dignissim eleifend. In id posuere orci. Vestibulum et venenatis odio.
+
+                    Integer ac augue sem. Morbi imperdiet eget sapien vel blandit. Aenean ac metus at turpis bibendum pretium non ut est. Nulla sed risus fermentum, iaculis nulla id, porta justo. Quisque lacinia dolor eget urna semper dapibus. Vivamus ornare orci tellus, vel laoreet lectus pretium id. Donec lacinia enim at nibh vulputate laoreet. Nullam semper sit amet est ut sagittis. Aliquam id lobortis justo, in vehicula eros. Nullam maximus justo a consectetur iaculis. Nulla sapien nisl, blandit ac felis et, porta laoreet ex. Cras luctus turpis mauris, nec sodales quam blandit et.
+                    
+                    Nullam dui dolor, posuere in lacinia id, varius auctor tortor. Curabitur posuere congue mi, quis dictum lacus maximus sed. Maecenas libero diam, porta ut orci vitae, accumsan commodo ante. Aliquam at ipsum nec nulla bibendum fringilla ut a nulla. Nunc laoreet rutrum nibh, quis feugiat libero ullamcorper sed. In id tellus at libero tempor euismod et nec odio. Curabitur pretium sollicitudin tristique. Praesent placerat justo lectus, nec mollis odio efficitur ultricies. Duis venenatis vel magna sed malesuada. Curabitur posuere tempus sodales.
+                </div>
+            </div>
+                <div class="col-md-6">
+                    Skrolano je <span>0</span> puta
+                    <h3></h3>
+                    <div id="result"></div>
+                </div>
+           
+        </div>
+
+
+
+</body>
+
+</html>

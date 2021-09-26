@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <script>
+$(document).ready(function(){
+    var neuredeno = $("#neuredeno").text();
+    $("#bold").click(function(){
+        $("#uredeno").text(neuredeno);
+        $("#uredeno").addClass('bold');
+        $("#uredeno").removeClass('italic');
+    })
+    $("#italic").click(function(){
+        $("#uredeno").text(neuredeno);
+        $("#uredeno").addClass('italic');
+        $("#uredeno").removeClass('bold');
+    })
+    $("#bold_italic").click(function(){
+        $("#uredeno").text(neuredeno);
+        $("#uredeno").addClass('italic bold');
+    })
+    $("#normal").click(function(){
+        $("#uredeno").text(neuredeno);
+        $("#uredeno").removeClass();
+
+    })
+})
+    </script>
+
+    <style>
+        .bold{
+            font-weight: 900;
+        }
+
+        .italic{
+            font-style:italic;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="neuredeno">
+                   ovdje se nalazi tekst kojeg treba urediti 
+                </div>
+                <button id="bold">BOLD</button>
+                <button id="italic">italic</button>
+                <button id="bold_italic">Bold & Italic</button>
+                <button id="normal">normal</button>
+            </div>
+            <div class="col-md-6">
+                <div id="uredeno"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

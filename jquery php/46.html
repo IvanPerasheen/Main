@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+    .skriveno {
+        color:red;
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+        $(".skriveno").hide();
+        var sviInputi=$('input[type="text"]');
+        sviInputi.focus(function() {
+            var pomoc=$(this).attr('id') + 'Pomoc';
+            $("#"+pomoc).show();
+        })
+
+        sviInputi.blur(function() {
+            var pomoc = $(this).attr('id') + 'Pomoc';
+            $("#"+pomoc).hide();
+        })
+    })
+</script>
+
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                Unesite ime <br />
+                <input type="text" id="ime"> <br />
+                <div id="imePomoc" class="skriveno">ime npr. Perica</div>
+                Unesite prezime <br />
+                <input type="text" id="prezime"> <br />
+                <div id="prezimePomoc" class="skriveno">prezime npr. Perić</div>
+                Unesite email <br />
+                <input type="text" id="email"> <br />
+                <div id="emailPomoc" class="skriveno">npr. perica.peric@yahoo.com</div>
+                Unesite primanja <br />
+                <input type="text" id="primanja"> <br />
+                <div id="primanjaPomoc" class="skriveno">npr. 10000</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

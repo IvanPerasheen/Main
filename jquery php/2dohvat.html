@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+ 
+    </style>
+    <script>
+        $(document).ready(function () {
+           $("#dodaj").click(function()
+           {
+                var ime=$("#ime").val();
+                $("#lista").append("<li>" +ime+"</li>");
+                $("#ime").val("");
+           });
+           $("#brisi").click(function(){
+                $("li:last-child").remove();
+           });
+        });
+    </script> 
+</head>
+ 
+<body>
+    <div class="container p-5 bg-info">
+        <div class="row">
+            <div class="col-md-12">   
+                    <input type="text" id="ime" name="ime" placeholder="unesite ime">
+
+                    <button id="dodaj">dodaj</button>
+                    <button id="brisi">briši</button>
+            </div>
+            <div class="col-md-6">
+                <ul id="lista">
+                    <li>html</li>
+                    <li>css</li>
+                    <li>jquery</li>
+                </ul>
+            </div>
+        </div>
+        <!-- container -->
+    </div>
+</body>
+ 
+</html>
