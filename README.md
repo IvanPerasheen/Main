@@ -1,6 +1,6 @@
 - Hi, I’m Ivan
 - I’m interested in web and aplication development, music and video editing
-- I’m currently learning video editing skills and some WordPress
+- I’m currently learning some new video editing skills and WordPress
 - You can reach me via ivan.perasin@hotmail.com or Instagram @peco.lmao
 
 <!---
