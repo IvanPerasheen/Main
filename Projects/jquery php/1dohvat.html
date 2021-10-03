@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <style>
+
+    </style>
+    
+    <script>
+        $(document).ready(function() {
+            $("#btn1").click(function(){
+                var text=$("#test").text();
+                //console.log(text);
+                $("#kopirano").text(text);
+            });
+            $("#btn2").click(function(){
+                var text=$("#test").html();
+                //console.log(text);
+                $("#kopirano").html(text);
+            });
+            $("#btn3").click(function(){
+                var text=$("#test").text();
+                //console.log(text);
+                $("#kopirano").append(text+ '<br />');
+            });
+            $("#btn4").click(function(){
+                var text=$("#test").html();
+                //console.log(text);
+                $("#kopirano").append(text+ '<br />');
+            });
+        });
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container p-5 bg-info">
+        <div class="row">
+            <div class="col-md-12">  
+                    <div id="test">Ovo je neki <strong>podebljan</strong> i <em>nakošen</em> tekst u divu id="test"</div>
+                    <button id="btn1">Metoda tekst</button>
+                    <button id="btn2">Metoda html</button>
+                    <button id="btn3">Apend Metoda text</button>
+                    <button id="btn4">Apend Metoda html</button>
+                    <p id="kopirano"></p>
+                    
+            </div>
+         </div>
+    </div>
+    <!-- container -->
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <script>
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        var godina = $("#godina").val();
+        // console.log(godina);
+        if (godina<1900 || isNaN(godina)){
+            $("#test").addClass("crvena");
+            $("#test").html(godina + '<h3> Netočno </h3>');
+        }
+        else {
+            $("#test").html(godina);
+            $("#test").removeClass("crvena");
+        }
+    })
+})
+    </script>
+    <style>
+        .crvena{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Unesite godinu rođenja</h2> 
+                <input type="text" id="godina">
+                <button id="btn1">Dodaj</button>
+            </div>
+            <div class="col-md-6">
+                <div id="test">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
